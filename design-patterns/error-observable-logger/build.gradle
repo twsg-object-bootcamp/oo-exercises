@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.thoughtworks.oocamp'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.12
+targetCompatibility = 1.12
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-core', version: '2.1'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+    compile group: 'com.google.guava', name: 'guava', version: '28.0-jre'
+}
