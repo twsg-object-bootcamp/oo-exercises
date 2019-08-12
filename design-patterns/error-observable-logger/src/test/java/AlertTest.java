@@ -47,6 +47,6 @@ public class AlertTest {
     public void shouldNotSendAlertMessageToSlack_whenThereIsNoError() {
         app.runSuccessfully();
 
-        verify(slackClient).sendMessage(anyString(), anyString());
+        verify(slackClient, never()).sendMessage(anyString(), anyString());
     }
 }
