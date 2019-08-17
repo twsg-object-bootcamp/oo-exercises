@@ -4,7 +4,8 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import static org.mockito.Matchers.*;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Matchers.contains;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 
@@ -23,7 +24,7 @@ public class AlertTest {
     }
 
     @Test
-    public void shouldSendAlert_whenAnErrorIsLogged() {
+    public void shouldSendAlertToEmail_whenAnErrorIsLogged() {
         app.runWithError();
 
         verify(emailClient).sendEmail(anyString(), anyString(), contains("Something wrong happened."));
@@ -37,7 +38,7 @@ public class AlertTest {
     }
 
     @Test
-    public void shouldNotSendAlert_whenThereIsNoError() {
+    public void shouldNotSendAlertToEmail_whenThereIsNoError() {
         app.runSuccessfully();
 
         verify(emailClient, never()).sendEmail(anyString(), anyString(), anyString());

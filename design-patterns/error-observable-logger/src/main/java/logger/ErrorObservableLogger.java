@@ -19,6 +19,7 @@ public class ErrorObservableLogger implements Logger, ErrorObservable  {
     @Override
     public void error(String message) {
         delegatedLogger.error(message);
+        errorObservers.forEach(o -> o.notify(message));
     }
 
     @Override
