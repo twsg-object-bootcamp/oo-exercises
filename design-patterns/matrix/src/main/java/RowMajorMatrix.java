@@ -29,12 +29,14 @@ public class RowMajorMatrix implements Iterable<Integer> {
 
         @Override
         public boolean hasNext() {
-            return false;
+            return currentPos < rowSize * values.size();
         }
 
         @Override
         public Integer next() {
-            return null;
+            int value = values.get(currentPos / rowSize).get(currentPos % rowSize);
+            currentPos++;
+            return value;
         }
     }
 }

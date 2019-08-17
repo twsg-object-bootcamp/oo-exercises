@@ -25,8 +25,6 @@ public class ColumnMajorMatrix implements Iterable<Integer> {
     }
 
     private class ColumnMajorMatrixIterator implements Iterator<Integer> {
-        private int currentPos = 0;
-
         @Override
         public boolean hasNext() {
             return false;
