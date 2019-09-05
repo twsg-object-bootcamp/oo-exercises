@@ -1,5 +1,4 @@
 import java.math.BigDecimal;
-import java.util.Objects;
 
 public class Product {
     private final String name;

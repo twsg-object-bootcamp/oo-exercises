@@ -39,7 +39,7 @@ public class ShoppingCartTest {
     }
 
     @Test
-    public void removeItem_shouldDoNothingWithNotExistingProduct() {
+    public void removeItem_shouldDoNothingForNotExistingProduct() {
         Product product = new Product("iPhone", Category.MOBILE_PHONE, BigDecimal.TEN);
         ShoppingCart shoppingCart = new ShoppingCart();
 
