@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class TransferTransaction extends Transaction {
+public class TransferTransaction implements Transaction {
     private final String account;
     private final String toAccount;
     private final BigDecimal amount;

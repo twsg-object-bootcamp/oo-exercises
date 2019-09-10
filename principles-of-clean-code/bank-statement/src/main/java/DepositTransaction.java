@@ -7,7 +7,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 
-public class DepositTransaction extends Transaction {
+public class DepositTransaction implements Transaction {
     private final String account;
     private final BigDecimal amount;
     private final LocalDateTime time;
