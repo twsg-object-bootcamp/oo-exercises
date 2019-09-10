@@ -1,3 +1,3 @@
-public interface Transaction {
-    String format();
+public abstract class Transaction {
+    public abstract String format();
 }

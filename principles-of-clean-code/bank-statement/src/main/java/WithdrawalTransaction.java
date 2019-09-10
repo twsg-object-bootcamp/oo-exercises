@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-public class WithdrawalTransaction implements Transaction {
+public class WithdrawalTransaction extends Transaction {
     private final String account;
     private final BigDecimal amount;
     private final LocalDateTime time;
